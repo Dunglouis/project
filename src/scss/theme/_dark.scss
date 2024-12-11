@@ -1,0 +1,75 @@
+/*
+    The code was written by programmer Truong Tuan Anh
+    Thanks for watching and sharing !!!
+*/
+html.dark {
+  --main-color: #ffb700; /* Vẫn giữ màu chính nổi bật */
+  --main-color-white: #ffffff; /* Màu trắng cho các thành phần nổi bật */
+  --main-color-red: #ff5733; /* Màu đỏ nhạt để tương phản tốt hơn trong nền tối */
+  --main-color-dark: #171c28; /* Màu nền chính, màu tối nhất */
+  --main-color-grey: #9e9da8; /* Màu xám đậm cho nền và các thành phần */
+  --main-color-grey-1: #1c1c1c; /* Màu xám đậm */
+  --main-color-grey-2: #292e39; /* Màu xám tối cho các thành phần phụ */
+  --main-color-grey-3: #9e9da8; /* Màu xám nhẹ cho các thành phần phụ */
+  --main-color-green: #84ac8d; /* Màu xanh lá cây giữ nguyên */
+  --main-color-highlight: #0071dc; /* Màu nhấn nổi bật giữ nguyên */
+  --text-color-main-light-3: #9e9da8; /* Màu chữ nhẹ để làm nổi bật một số phần */
+  --background-logo: #1c1c1c; /* Màu nền cho logo */
+  --background-navbar: #292e39; /* Màu nền cho navbar */
+  --box-shadow-light-main: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Đổi thành màu sáng cho shadow trong nền tối */
+  --background-hover-navbar: #2c3e50; /* Màu nền hover cho navbar */
+  --background-color-2: #292e39; /* Màu nền phụ cho các phần */
+  --box-shadow-main-1: rgba(0, 0, 0, 0.3); /* Shadow tối hơn cho nền tối */
+  --box-shadow-main-2: rgba(0, 0, 0, 0.5); /* Shadow tối hơn cho nền tối */
+
+  ///
+  --color-background-layout: #171c28;
+  --filter--icon: brightness(0) invert(1);
+  --background-button: #292e39;
+  --boxshadow-main: rgba(23, 28, 40, 0.4);
+  --background-color-main: #1a162e; /* Màu nền chính cho các phần chính */
+  --background-color-main-2: #2c3e50;
+  --background--color-main-3: #1c1c1c;
+  --color-text: #ffff;
+  --text-color-main-light-2: #fff;
+  --background--footer: #292e39;
+  --color-text-2: #9e9da8;
+  --background-login: #292e39;
+  --text-color-main-light: #fff;
+  --background__breadcrumb: #171c28;
+  --boxShadow__breadcrumb: rgba(23, 28, 40, 0.2);
+  --text-color-breadcrumb: #9e9da8;
+  --background__studyplant-item: var(--background__breadcrumb);
+  --boxShadow--studyPlant-item: var(--boxShadow__breadcrumb);
+  --background-active-color: #292e39;
+  --shadow--bg-gift: rgba(23, 28, 40, 0.2);
+  --background-bg-gift: #171c28;
+  --border-color-gift: #7644e1;
+  --background-gift: #171c28;
+  --shadow-gift: var(--shadow--bg-gift);
+  --background-linear: linear-gradient(
+    347deg,
+    rgba(161, 116, 255, 1) 37%,
+    rgba(94, 187, 255, 1) 69%
+  );
+  --background-quote: #171c28;
+  --background-flashcard: var(--background-quote);
+  --background-default-button: #171c28;
+  --background-welcome: #171c28;
+  --background__lesson: #171c28;
+  --boxShadow__lesson: rgba(23, 28, 40, 0.2);
+  --background--color-tag: #171c28;
+  --color-text-study: #9e9da8;
+  //profile
+  --profile-sidebar-bg: #171c28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+  --profile-hover-link-bg: #292e39;
+  //account infor
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
+}

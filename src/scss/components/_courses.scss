@@ -1,0 +1,197 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.courses {
+  margin-top: 40px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 50px;
+  }
+
+  &__picture {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    @include abstracts.breakpoint(lg) {
+      height: 200px;
+    }
+  }
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__button {
+    width: 100% !important;
+    font-size: 1.2rem;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  &__heading {
+    color: var(--text-color-main-light);
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 123.81%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.8rem;
+    }
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+  }
+  &__desc {
+    max-width: 483px;
+    margin-top: 18px;
+    color: var(--color-text-2);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 128%;
+    @include abstracts.breakpoint(md) {
+      max-width: 283px;
+      font-size: 0.8rem;
+    }
+  }
+  &__right {
+    display: flex;
+    gap: 20px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    transition: all 0.2s ease;
+    &:hover {
+      background: var(--main-color);
+    }
+    &:hover .courses__icon {
+      stroke: var(--main-color-white);
+    }
+    @include abstracts.breakpoint(md) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--main-color);
+  }
+  &__list {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    @include abstracts.breakpoint(lg) {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  &__content {
+    padding: 10px 10px;
+    background: var(--background--color-main-3);
+    border-radius: 0 0 20px 20px;
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--desc {
+      color: var(--color-text-2);
+      margin-top: 8px;
+      font-weight: 500;
+      line-height: 148%;
+    }
+    &--bottom {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    color: var(--text-color-main-light);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 120%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.2rem;
+    }
+  }
+  &__content--wrap {
+    min-height: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px var(--box-shadow-main-1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  &__active {
+    margin-top: 4px;
+  }
+  &__like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 7px 14px 32px 11px var(--box-shadow-main);
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  &__total-lesson,
+  &__total-file {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    @include abstracts.breakpoint(lg) {
+      font-size: 0.8rem;
+    }
+  }
+  &__lesson,
+  &__file {
+    color: var(--text-color-main-light-3);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 128%;
+    &--icon {
+      width: 15px;
+      height: 15px;
+    }
+    @include abstracts.breakpoint(lg) {
+      font-size: 0.8rem;
+    }
+  }
+}

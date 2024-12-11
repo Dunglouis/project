@@ -1,0 +1,124 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.welcome {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 61;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  background: var(--background-welcome);
+  border-radius: 20px;
+  @include abstracts.breakpoint(lg) {
+    top: 10%;
+    left: 50%;
+    width: 400px;
+  }
+  @include abstracts.breakpoint(md) {
+    top: 20%;
+    left: 48%;
+    width: 350px;
+  }
+  &__icon {
+    width: 250px;
+    height: 200px;
+    @include abstracts.breakpoint(xxl) {
+      width: 200px;
+      height: 150px;
+    }
+    @include abstracts.breakpoint(md) {
+      display: none;
+    }
+  }
+  &__desc {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: var(--text-color-main-light);
+
+    @include abstracts.breakpoint(md) {
+      margin-top: 20px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    gap: 20px;
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+    }
+  }
+  &__heading {
+    background: var(--background-linear);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 123.81%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include abstracts.breakpoint(xxl) {
+      font-size: 1.4rem;
+    }
+    @include abstracts.breakpoint(xl) {
+      font-size: 1.2rem;
+    }
+  }
+  &__cancel {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eeee;
+    transition: all 0.2s ease;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  &__icon--cancel {
+    width: 16px;
+    height: 16px;
+  }
+  &__rules {
+    margin-top: 30px;
+    &--heading {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 123.81%;
+      color: var(--text-color-main-light);
+      @include abstracts.breakpoint(xl) {
+        font-size: 1.2rem;
+      }
+    }
+    &--list {
+      margin-top: 20px;
+      margin-left: 15px;
+      & li {
+        margin-top: 15px;
+        color: var(--text-color-main-light);
+      }
+    }
+  }
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 60;
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(5px);
+  }
+  &__button {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    animation: shake_1 1s infinite;
+    font-size: 1.3rem;
+  }
+}

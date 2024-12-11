@@ -1,0 +1,183 @@
+@use "../abstracts";
+.ant-menu-item {
+  margin-top: 20px !important;
+  padding-left: 24px !important;
+  padding-top: 5px !important;
+  padding-bottom: 3px !important;
+}
+.ant-menu-item-selected {
+  background: #b8b8bb;
+  background: var(--background-hover-navbar);
+}
+
+//slider
+.slider-container {
+  border-radius: 10px;
+  height: 335px;
+  width: 100%; // Điều chỉnh kích thước theo nhu cầu
+  overflow: hidden; // Ẩn phần tràn ra ngoài để slider gọn gàng
+}
+
+.slick-slide {
+  display: flex; // Đảm bảo các slide được hiển thị như các phần tử flex
+  justify-content: center; // Căn giữa nội dung bên trong các slide
+  align-items: center; // Căn giữa nội dung theo chiều dọc bên trong các slide
+}
+.slick-dots {
+  display: flex !important;
+  gap: 6px;
+}
+.slick-dots li,
+.slick-dots li button {
+  width: 32px;
+  border-radius: 8px;
+  height: 4px;
+  background: var(--background-color-main) !important;
+  position: relative;
+  @include abstracts.breakpoint(md) {
+    width: 20px !important;
+  }
+}
+
+.slick-dots li.slick-active button {
+  background: var(--background-color-main-2) !important;
+  z-index: 2;
+  width: 32px !important;
+  height: 4px !important;
+  border-radius: 8px !important;
+  position: relative;
+  @include abstracts.breakpoint(md) {
+    width: 20px !important;
+  }
+}
+.slick-dots li button:before {
+  display: none;
+}
+.ant-layout {
+  background: var(--color-background-layout) !important;
+}
+.ant-layout-content {
+  min-height: auto !important;
+}
+.ant-menu-item-selected {
+  background: var(--background-active-color) !important;
+}
+#nprogress .bar {
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 4px; /* Độ dày vừa phải */
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 50%; /* Giả lập đang tải được 50% */
+  border-radius: 20px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+  box-shadow: 0 0 10px rgba(255, 105, 135, 0.8), 0 0 5px rgba(255, 152, 0, 0.6); /* Bóng mờ chạy theo */
+}
+.slick-track {
+  width: 100%;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 65px;
+  height: 117px;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff8001;
+  box-shadow: 0 0 0 50px;
+  clip-path: polygon(
+    100% 0,
+    23% 46%,
+    46% 44%,
+    15% 69%,
+    38% 67%,
+    0 100%,
+    76% 57%,
+    53% 58%,
+    88% 33%,
+    60% 37%
+  );
+}
+.loader:after {
+  animation: l8 1s infinite;
+  transform: perspective(300px) translateZ(0px);
+}
+@keyframes l8 {
+  to {
+    transform: perspective(300px) translateZ(180px);
+    opacity: 0;
+  }
+}
+.loader-text {
+  width: fit-content;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding-bottom: 8px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+  animation: l2 2s linear infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}
+.loader__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 300px;
+}
+/* HTML: <div class="loader"></div> */
+.loader-text-1 {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  display: inline-grid;
+  &::before,
+  &::after {
+    content: "Loading...";
+    grid-area: 1/1;
+    -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+    animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+  }
+  &::after {
+    -webkit-mask-position: 1ch 50%;
+    --s: -1;
+  }
+}
+@keyframes l11 {
+  100% {
+    transform: translateY(calc(var(--s, 1) * 0.1%));
+  }
+}

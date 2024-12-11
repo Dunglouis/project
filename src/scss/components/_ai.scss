@@ -1,0 +1,31 @@
+.ai {
+  &__wrap {
+    border-radius: 20px;
+    background: var(--background-linear);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    width: 120px;
+    height: 120px;
+  }
+  &__heading {
+    color: var(--text-color-main-light-2);
+    font-size: 1rem;
+    line-height: 128%;
+    font-weight: 500;
+  }
+  &__link {
+    display: inline-block;
+    color: var(--main-color);
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    animation: ShakeIcon 1s ease infinite;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

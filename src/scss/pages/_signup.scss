@@ -1,0 +1,126 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.signUp {
+  font-family: "Roboto";
+  overflow-x: hidden;
+  &__wrap {
+    transition: all 0.5s ease-in;
+    @include abstracts.breakpoint(md) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__wrap {
+    background: var(--background-login);
+  }
+  &__background {
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--main-color-grey-1);
+    height: 100vh;
+    min-height: 100%;
+    @include abstracts.breakpoint(md) {
+      flex-wrap: nowrap;
+      position: relative;
+    }
+  }
+  &__img {
+    margin-top: 50px;
+    width: 600px;
+    max-height: 532px;
+    @include abstracts.breakpoint(lg) {
+      width: 450px;
+    }
+    @include abstracts.breakpoint(md) {
+      width: 400px;
+    }
+  }
+  &__desc {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color-main-light);
+
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.3rem;
+    }
+  }
+  &__highlight {
+    color: var(--main-color);
+  }
+  &__copyright {
+    font-size: 0.8rem;
+    max-width: 483px;
+    margin-top: 18px;
+    color: var(--text-color-main-light-3);
+    font-weight: 600;
+    line-height: 128%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 0.7rem;
+    }
+  }
+  &__content {
+    padding: 30px;
+  }
+  &__title {
+    margin-top: 30px;
+    color: var(--text-color-main-light);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 146.667%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.4rem;
+    }
+    &--desc {
+      margin: 30px auto 0;
+      width: 460px;
+      color: var(--main-color-grey-3);
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 146.667%;
+      @include abstracts.breakpoint(xl) {
+        width: 400px;
+      }
+      @include abstracts.breakpoint(lg) {
+        width: 300px;
+      }
+    }
+  }
+  &__dot {
+    width: 12px;
+    height: 12px;
+    background: var(--main-color-white);
+    border-radius: 50%;
+  }
+  &__dot + &__dot {
+    background: #ccc;
+    margin-right: 10px;
+  }
+  &__next {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    fill: #ccc;
+    @include abstracts.breakpoint(md) {
+      position: absolute;
+      top: 85%;
+    }
+  }
+  &__md-active {
+    transform: translateX(-100%);
+  }
+  &__signUp {
+    margin-top: 100px;
+    font-weight: 500;
+    &--highlight {
+      color: var(--main-color-highlight);
+    }
+  }
+}

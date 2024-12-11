@@ -1,0 +1,146 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.help {
+  position: fixed;
+  width: 400px;
+  right: 60px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  @include abstracts.breakpoint(md) {
+    right: 30px;
+    bottom: 100px;
+  }
+  &__icon {
+    margin-bottom: 25px;
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      background: transparent;
+    }
+  }
+  &__setbg {
+    background: var(--main-color-grey);
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+  &__desc {
+    line-height: 128%;
+    color: var(--color-text-2);
+  }
+  &__icon--social {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__notification {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    width: 400px;
+    padding: 20px;
+    max-width: 483px;
+    margin-top: 18px;
+    color: var(--text-color-main-light-3);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 128%;
+    border-radius: 20px;
+    background: var(--background--color-main-3);
+    box-shadow: 0px 10px 15px -3px var(--box-shadow-main-1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    @include abstracts.breakpoint(md) {
+      width: 300px;
+      top: -70px;
+    }
+  }
+  &__picture {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__icon {
+    align-self: self-end;
+    cursor: pointer;
+    animation: ShakeIcon 1s ease infinite;
+    &:hover {
+      scale: 1.1;
+    }
+    &--social {
+      width: 20px;
+      height: 20px;
+    }
+    &--active {
+      animation: ShakeIcon 0.5s ease infinite;
+    }
+  }
+  &__cancel {
+    position: absolute;
+    left: -13px;
+    top: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color-grey);
+    border-radius: 50%;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  &__triangle {
+    z-index: 1;
+    position: absolute;
+    border-radius: 2px;
+    right: 54px;
+    bottom: -6px;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 10px 15px -3px var(--box-shadow-main-1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    rotate: 45deg;
+    filter: var(--filter--icon);
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    background: var(--main-color-grey);
+    &--wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: all 0.2s ease;
+    }
+  }
+  &__unActive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3px);
+    transition: all 0.2s ease; /* Thay đổi từ 0.2 thành 0.2s */
+  }
+
+  &__active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Đảm bảo có thuộc tính này nếu cần */
+  }
+}

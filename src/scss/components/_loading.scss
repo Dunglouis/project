@@ -1,0 +1,13 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__heading {
+    font-size: 1.6rem;
+    color: #eeee;
+  }
+}

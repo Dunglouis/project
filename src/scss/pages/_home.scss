@@ -1,0 +1,306 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.shares {
+  margin-top: 80px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 40px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  &__pictures {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+  }
+  &__heading {
+    color: var(--text-color-main-light);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 123.81%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.8rem;
+    }
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+  }
+  &__desc {
+    max-width: 483px;
+    margin-top: 18px;
+    color: var(--color-text-2);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 128%;
+    @include abstracts.breakpoint(md) {
+      max-width: 283px;
+      font-size: 0.8rem;
+    }
+  }
+  &__link--top {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__list {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    & .slider-container {
+      height: auto;
+    }
+    @include abstracts.breakpoint(lg) {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    padding: 10px;
+    &--wrap {
+      min-height: 325px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 15px -3px var(--box-shadow-main-1);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  &__content {
+    padding: 10px 10px;
+    border-radius: 0 0 20px 20px;
+    background: var(--background--color-main-3);
+    @include abstracts.breakpoint(md) {
+      padding: 10px;
+    }
+  }
+  &__date {
+    color: var(--text-color-main-light);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 185.714%;
+  }
+  &__title {
+    color: var(--text-color-main-light);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    &:hover {
+      text-decoration: underline;
+      color: var(--main-color);
+    }
+    @include abstracts.breakpoint(lg) {
+      font-size: 1rem;
+    }
+  }
+  &__time--icon {
+    width: 16px;
+    height: 16px;
+  }
+  &__views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    &--icon {
+      width: 16px;
+      height: 16px;
+    }
+    &--number {
+      color: var(--text-color-main-light-3);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 128%;
+    }
+  }
+  &__time {
+    color: var(--text-color-main-light-3);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 128%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 0.8rem;
+    }
+  }
+  &__timeRead {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.popular {
+  margin-top: 30px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 15px;
+  }
+  &__link--icon {
+    width: 16px;
+    height: 16px;
+  }
+  &__link {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &__pictures {
+    height: 200px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  &__heading {
+    color: var(--text-color-main-light);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 123.81%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.8rem;
+    }
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+  }
+  &__desc {
+    max-width: 483px;
+    margin-top: 18px;
+    color: var(--color-text-2);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 128%;
+    @include abstracts.breakpoint(md) {
+      max-width: 283px;
+      font-size: 0.8rem;
+    }
+  }
+  &__link--top {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__list {
+    margin-top: 60px;
+    & .slider-container {
+      height: auto;
+    }
+    @include abstracts.breakpoint(lg) {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    padding: 10px;
+    &--wrap {
+      border-radius: 20px;
+      background: var(--main-color-white);
+      box-shadow: 0px 10px 15px -3px var(--box-shadow-main-1);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  &__content {
+    padding: 20px 10px;
+    border-radius: 0 0 20px 20px;
+    background: var(--background--color-main-3);
+    @include abstracts.breakpoint(md) {
+      padding: 10px;
+    }
+  }
+  &__date {
+    color: #5f5b53;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 185.714%;
+  }
+  &__title {
+    color: var(--text-color-main-light);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    &:hover {
+      text-decoration: underline;
+      color: var(--main-color);
+    }
+    @include abstracts.breakpoint(lg) {
+      font-size: 1rem;
+    }
+  }
+  &__link {
+    margin-top: 20px;
+  }
+}
+.overlay {
+  display: none;
+
+  @include abstracts.breakpoint(md) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 20;
+  }
+}
+.separate {
+  margin: 6px 0;
+  width: 60%;
+  height: 1px;
+  background: #ccc;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 118px;
+  height: 50px;
+  border-radius: 10px;
+  background: var(--main-color-grey);
+  font-weight: 500;
+  color: var(--color-text);
+  &:hover {
+    background: var(--main-color);
+  }
+}

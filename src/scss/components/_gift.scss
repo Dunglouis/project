@@ -1,0 +1,70 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.gift {
+  display: inline-block;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  @include abstracts.breakpoint(md) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    animation: ShakeIcon 1s ease infinite;
+  }
+  &__wrap {
+    display: flex;
+    padding: 30px;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 20px;
+    background: var(--background-gift);
+    box-shadow: 0px 20px 60px 10px var(--shadow--bg-gift);
+  }
+  &__image--wrap {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(var(--border-color-gift-rgb), 0.5);
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    background: var(
+      --Purple-Purple-10,
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      ),
+      #7644e1
+    );
+    box-shadow: 0px 20px 60px 10px var(--shadow--bg-gift);
+  }
+  &__title {
+    color: var(--text-color-main-light);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+  &__desc {
+    margin-top: 10px;
+    color: var(--text-color-main-light);
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+}
+.gift + .gift {
+  margin-bottom: 20px;
+  display: block;
+
+  @include abstracts.breakpoint(md) {
+    margin-bottom: 20px;
+  }
+}

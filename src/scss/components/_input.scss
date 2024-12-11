@@ -1,0 +1,188 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.input {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__notification--success {
+    padding: 20px;
+    border-left: 10px solid var(--main-color-green); /* Màu viền xanh thành công */
+  }
+  &__error--icon {
+    animation: shakeError 2s;
+    width: 16px;
+    height: 16px;
+  }
+  &__error--text {
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--main-color-red);
+  }
+  &__success-backLogin {
+    display: inline-block;
+    font-weight: 600;
+    color: #0071dc;
+  }
+  &__border--error {
+    border: 2px solid var(--main-color-red) !important;
+  }
+  &__border--success {
+    border: 2px solid var(--main-color-green) !important;
+  }
+  &__form {
+    margin-top: 30px;
+    display: flex;
+    width: 400px;
+    padding: 12px 12px 12px 12px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+    color: var(--text-color-main-light);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 144.444%;
+    @include abstracts.breakpoint(lg) {
+      width: 300px;
+    }
+
+    &::placeholder {
+      color: var(--Secondary-Color-Secondary-3, #d2d1d6);
+
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 144.444%;
+    }
+    &--wrap {
+      position: relative;
+    }
+  }
+  &__error--icon {
+    position: absolute;
+    right: 15px;
+    top: 55%;
+    width: 20px;
+    height: 20px;
+  }
+  &__error--icon-login {
+    top: 45% !important;
+  }
+  &__icon {
+    position: absolute;
+    right: 15px;
+    top: 55%;
+    width: 20px;
+    height: 20px;
+  }
+  &__action {
+    margin-top: 30px;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    @include abstracts.breakpoint(lg) {
+      width: 300px;
+    }
+  }
+  &__checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__button--wrap {
+    margin-top: 40px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--Secondary-Color-Secondary-1, #1a162e);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 144.444%;
+    transition: all 0.2s ease;
+    @include abstracts.breakpoint(lg) {
+      width: 300px;
+    }
+    &:hover {
+      scale: 1.07;
+    }
+  }
+  &__default--title {
+    color: var(--Secondary-Color-Secondary-2, #9e9da8);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__forgot {
+    color: var(--Blue-Blue, #0071dc);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+  &__checkbox--container {
+    display: block;
+    position: relative;
+    padding-left: 20px; /* Khoảng cách giữa văn bản và checkbox */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+
+  &__default {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 2px solid var(--main-color-green); /* Màu viền xanh thành công */
+    @include abstracts.breakpoint(md) {
+      top: -7px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &__default:checked ~ &__checkmark {
+    background-color: var(--main-color-green);
+  }
+
+  &__default:checked ~ &__checkmark::after {
+    display: block;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,68 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@use "../abstracts";
+.slide {
+  position: relative;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  @include abstracts.breakpoint(md) {
+    height: 166px;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+  &__image {
+    border-radius: 10px;
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+    width: 100%;
+    height: 100%;
+    &--img {
+      border-radius: 10px;
+      width: 100%;
+      height: 300px; // Điều chỉnh kích thước theo nhu cầu
+      object-fit: cover;
+      @include abstracts.breakpoint(md) {
+        height: 166px;
+      }
+    }
+  }
+  &__action {
+    display: flex;
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--background-button);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px var(--boxshadow-main);
+    cursor: pointer;
+    svg {
+      width: 10px;
+      height: 10px;
+      transition: all 0.5s ease;
+    }
+  }
+  &__prev {
+    left: -16px;
+    svg:hover {
+      transform: translateX(-2px);
+    }
+  }
+  &__next {
+    right: -16px;
+    svg:hover {
+      transform: translateX(2px);
+    }
+  }
+}

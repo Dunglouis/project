@@ -1,0 +1,75 @@
+/*
+    The code was written by programmer Truong Tuan Anh
+    Thanks for watching and sharing !!!
+*/
+html {
+  --main-color: #ffb900;
+  --main-color-white: #ffff;
+  --main-color-red: red;
+  --main-color-dark: #000;
+  --main-color-grey: #e2dfda;
+  --main-color-grey-1: #e2dfda;
+  --main-color-grey-2: #eeee;
+  --main-color-grey-3: #b9babe;
+  --main-color-green: #84ac8d;
+  --main-color-highlight: #0071dc;
+  --text-color-main-light: #1a162e;
+  --background-logo: #dbdbe2;
+  --background-navbar: #eeeeee;
+  --box-shadow-light-main: #00000029;
+  --background-hover-navbar: #b8b8bb;
+  --background-color-2: #9e9da8;
+  --box-shadow-main-1: rgba(0, 0, 0, 0.08);
+  --box-shadow-main-2: rgba(0, 0, 0, 0.2);
+  --color-background-layout: #f5f5f5f5;
+  --filter--icon: invert(33%) sepia(6%) saturate(231%) hue-rotate(171deg)
+    brightness(93%) contrast(89%);
+  --boxshadow-main: rgba(200, 200, 200, 0.4);
+  --background-color-main: #eeeeee;
+  --background-color-main-2: #9e9da8;
+  --background--color-main-3: #ffff;
+  --color-text: #000000;
+  --text-color-main-light-2: #292e39;
+  --background--footer: #eeeeee;
+  --color-text-2: #9e9da8;
+  --background-button: #fff;
+  --background-login: #fff;
+  --text-color-main-light: #171c28;
+  --background__breadcrumb: #f6f6f6;
+  --boxShadow__breadcrumb: rgba(237, 237, 246, 0.2);
+  --text-color-breadcrumb: #9e9da8;
+  --background__studyplant-item: var(--background__breadcrumb);
+  --boxShadow--studyPlant-item: var(--boxShadow__breadcrumb);
+  --background-active-color: #e6f4ff;
+  --shadow--bg-gift: rgba(237, 237, 246, 0.2);
+  --background-bg-gift: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  --border-color-gift: #7644e1;
+  --background-gift: #fff;
+  --background-linear: linear-gradient(
+    347deg,
+    rgba(161, 116, 255, 1) 40%,
+    rgba(94, 187, 255, 1) 60%
+  );
+  --background-quote: #eeeeee;
+  --failure-answer-background: #ffeaea;
+  --success-answer-background: #f0ffed;
+  --background-flashcard: #eee;
+  --background-default-button: #eee;
+  --background-welcome: #eeee;
+  --background__lesson: #f6f6f6;
+  --boxShadow__lesson: rgba(237, 237, 246, 0.2);
+  --background--color-tag: #f2f2f2;
+  --color-text-study: #333;
+  //profile
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-hover-link-bg: #ebebeb;
+
+  //account infor
+  --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
+}

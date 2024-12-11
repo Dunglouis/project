@@ -1,0 +1,86 @@
+// The code was written by programmer Truong Tuan Anh
+// Thanks for watching and sharing
+
+@keyframes gradientAnimation {
+  0% {
+    color: #000000; /* Black color */
+  }
+  50% {
+    color: #c0ac77; /* Yellow color */
+  }
+  100% {
+    color: #ffb900; /* Yellow color */
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    scale: 1.2;
+  }
+
+  25%,
+  75% {
+    scale: 0.9;
+  }
+  50% {
+    scale: 1.1;
+  }
+}
+@keyframes shake_1 {
+  0%,
+  100% {
+    scale: 1.02;
+  }
+
+  25%,
+  75% {
+    scale: 0.97;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
+@keyframes ShakeIcon {
+  0%,
+  100% {
+    translate: 0;
+  }
+
+  25%,
+  75% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+}
+@keyframes shakeError {
+  0%,
+  100% {
+    translate: 0;
+  }
+
+  25%,
+  75% {
+    translate: -3px;
+  }
+  50% {
+    translate: 3px;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
